@@ -1,11 +1,19 @@
-export default function Home() {
+// pages/index.tsx
+import React from 'react';
+import Head from 'next/head';
+import ProductCatalog from './ProductCatalog';
+
+const HomePage: React.FC = () => {
   return (
-    <div className="container flex items-center p-4 mx-auto min-h-screen justify-center">
-      <main>
-        <h1 className="font-mono text-xl code">
-          Welcome to <span className="text-purple-700">Nextjs</span>, <span className="text-indigo-700">TailwindCSS</span> and <span className="text-gray-700">TypeScript</span>
-        </h1>
-      </main>
-    </div>
-  )
-}
+    <>
+      <Head>
+        <title>Product Catalog - NextJS Store</title>
+        <meta name="description" content="Browse our amazing product catalog with filtering and sorting options" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <ProductCatalog />
+    </>
+  );
+};
+
+export default HomePage;
